@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta
 guid: fade42e8bc714b018fac513c043d323b
 timeCreated: 1425440388
 licenseType: Store
 TextScriptImporter:
+========
+guid: c3991fe7d76346e409e674939fc90259
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>>> origin/Gleb:Assets/Scripts.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 
