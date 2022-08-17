@@ -6,7 +6,7 @@ public class ModuleButton : MonoBehaviour,  IRaycastTarget
 {
     [SerializeField] ModulePool pool;
 
-    public void Respond()
+    public void Respond(Vector3 position)
     {
         Debug.Log("Module button responded");
     }

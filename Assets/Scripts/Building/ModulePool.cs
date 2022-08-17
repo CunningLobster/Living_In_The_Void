@@ -6,21 +6,12 @@ using UnityEngine;
 public class ModulePool : MonoBehaviour
 {
     [SerializeField] List<Module> modules = new List<Module>();
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] Builder builder;
 
     public void GetModule()
     {
         var moduleToActivate = modules.FirstOrDefault<Module>(m => m.gameObject.activeInHierarchy == false);
         moduleToActivate.gameObject.SetActive(true);
+        builder.SetActiveModule(moduleToActivate);
     }
 }

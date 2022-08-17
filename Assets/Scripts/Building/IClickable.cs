@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IRaycastTarget
+public interface IClickable
 {
-    void Respond(Vector3 position);
+    void Click();
 }

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 270703062614487173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6957065304290805520}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654f7ba9c5bbada49aadb6e8ee8371fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  module: {fileID: 0}
 --- !u!135 &4157765679687923351
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -58,7 +59,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7398430638604938039
 Rigidbody:
@@ -104,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 6007594186677385752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8746688071736443884}

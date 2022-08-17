@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Surface : MonoBehaviour, IRaycastTarget
+public class Surface : MonoBehaviour, IRaycastTarget, IClickable
 {
-    public void Respond()
+    public void Click()
     {
-        Debug.Log("Surface Responded");
+        
+    }
+
+    public void Respond(Vector3 position)
+    {
+        
     }
 
     // Start is called before the first frame update

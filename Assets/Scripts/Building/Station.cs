@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Station : MonoBehaviour, IRaycastTarget
 {
-    public void Respond()
+    public void Respond(Vector3 position)
     {
-        Debug.Log("Station Responded");
+        
     }
 
     // Start is called before the first frame update

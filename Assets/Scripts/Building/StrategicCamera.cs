@@ -6,6 +6,9 @@ public class StrategicCamera : MonoBehaviour
 {
     public RaycastHit hit;
 
+    private Vector3 selectedBuildingPos;
+    public Vector3 SelectedBuildingPos { get => selectedBuildingPos; }
+
     void Start()
     {
         
@@ -16,7 +19,9 @@ public class StrategicCamera : MonoBehaviour
         if (!CameraRaycast(out hit)) return;
         CameraRaycast(out hit);
         if (hit.collider.gameObject.TryGetComponent<IRaycastTarget>(out IRaycastTarget raycastTarget))
-            raycastTarget.Respond();
+            raycastTarget.Respond(hit.point);
+
+        selectedBuildingPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10));
     }
 
     bool CameraRaycast(out RaycastHit hit)
