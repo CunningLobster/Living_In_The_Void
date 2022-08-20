@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Socket : MonoBehaviour, IRaycastTarget, IClickable
+public class Socket : MonoBehaviour, IRaycastTarget
 {
-    public Module module;
+    private Builder builder;
 
-    public void Click()
+    private void Awake()
     {
-        
+        builder = FindObjectOfType<Builder>();    
     }
 
-    public void Respond(Vector3 position)
+    public void Respond()
     {
-        
+        if (builder.ghostBuilding != null)
+        {
+
+        }
     }
+
+
 }

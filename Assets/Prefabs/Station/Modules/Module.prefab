@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4777182857381303856}
   - component: {fileID: 1399592322147119797}
   - component: {fileID: 2528659116920607843}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Module
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,8 +49,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3961a8a322fc64ba74a977dc6253c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraToModuleDistance: 5
-  pluggedIn: 0
 --- !u!65 &2528659116920607843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75,7 +73,7 @@ GameObject:
   - component: {fileID: 4530198795174597930}
   - component: {fileID: 7707313410219640214}
   - component: {fileID: 7589188640386404190}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,6 +156,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Socket (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 270703062614487173, guid: 8bf5a7776d9a6d54bb4c892d276b2f63, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007594186677385752, guid: 8bf5a7776d9a6d54bb4c892d276b2f63, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8746688071736443884, guid: 8bf5a7776d9a6d54bb4c892d276b2f63, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -220,6 +226,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Socket (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 270703062614487173, guid: 8bf5a7776d9a6d54bb4c892d276b2f63, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007594186677385752, guid: 8bf5a7776d9a6d54bb4c892d276b2f63, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8746688071736443884, guid: 8bf5a7776d9a6d54bb4c892d276b2f63, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -281,6 +295,14 @@ PrefabInstance:
     - target: {fileID: 270703062614487173, guid: 8bf5a7776d9a6d54bb4c892d276b2f63, type: 3}
       propertyPath: m_Name
       value: Socket
+      objectReference: {fileID: 0}
+    - target: {fileID: 270703062614487173, guid: 8bf5a7776d9a6d54bb4c892d276b2f63, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6007594186677385752, guid: 8bf5a7776d9a6d54bb4c892d276b2f63, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8746688071736443884, guid: 8bf5a7776d9a6d54bb4c892d276b2f63, type: 3}
       propertyPath: m_RootOrder

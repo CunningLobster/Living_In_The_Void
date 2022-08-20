@@ -2,13 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Surface : MonoBehaviour, IRaycastTarget
+public abstract class Building : MonoBehaviour
 {
-    public void Respond()
-    {
-        
-    }
-
     // Start is called before the first frame update
     void Start()
     {

@@ -4,18 +4,33 @@ using UnityEngine;
 
 public class Builder : MonoBehaviour
 {
-    Module activeModule;
-    [SerializeField] StrategicCamera strategicCamera;
+    [HideInInspector]
+    public GhostBuilding ghostBuilding = null;
+    [SerializeField] StrategicCamera StrategicCamera;
+
 
     private void Update()
     {
-        if (activeModule == null) return;
-        activeModule.transform.position = strategicCamera.SelectedBuildingPos;
+        if (ghostBuilding == null) return;
+        if (StrategicCamera.Hit.collider == null) return;
+
+        if (ghostBuilding is GhostModule && StrategicCamera.Hit.collider.TryGetComponent<Socket>(out Socket socket))
+            ghostBuilding.transform.position = socket.transform.position;
+        else
+            ghostBuilding.transform.position = StrategicCamera.Hit.point;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Build();
+        }
+
     }
 
-    public void SetActiveModule(Module module)
-    { 
-        activeModule = module;
+    void Build()
+    {
+        //≈сли услови€ строительства соблюдены
+        ghostBuilding.PlaceBuilding();
+        ghostBuilding = null;
     }
 
 }

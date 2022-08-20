@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Station : MonoBehaviour, IRaycastTarget
 {
-    public void Respond(Vector3 position)
+    public void Respond()
     {
         
     }

@@ -2,14 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ModuleButton : MonoBehaviour,  IRaycastTarget
+public class ModuleButton : MonoBehaviour
 {
-    [SerializeField] ModulePool pool;
-
-    public void Respond(Vector3 position)
-    {
-        Debug.Log("Module button responded");
-    }
+    [SerializeField] GhostBuildingPool pool;
 
     void Start()
     {

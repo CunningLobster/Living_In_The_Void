@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IRaycastTarget
 {
-    void Respond(Vector3 position);
+    void Respond();
 }
