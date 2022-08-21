@@ -4,11 +4,34 @@ using UnityEngine;
 
 public class GhostModule : GhostBuilding
 {
-    public bool connected;
+    [SerializeField] private Socket socket;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnDisable()
     {
-        if(other.TryGetComponent<Socket>(out Socket socket))
-            gameObject.transform.rotation = other.transform.rotation;
+        socket = null;
+        placeIsValid = false;
+    }
+
+    public void Connect(Socket socket)
+    {
+        this.socket = socket;
+    }
+
+    public void Disconnect()
+    {
+        socket = null;
+    }
+
+    private void Update()
+    {
+
+        if (socket == null)
+            placeIsValid = false;
+        else
+            placeIsValid = true;
+
+        //Debug.Log("Module pos: " + transform.position);
+        //Debug.Log("Socket pos: " + socket.transform.position);
+
     }
 }
