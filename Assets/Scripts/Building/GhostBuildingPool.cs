@@ -17,6 +17,6 @@ public class GhostBuildingPool : MonoBehaviour
     {
         GhostBuilding ghostBuilding = ghostBuildings.FirstOrDefault<GhostBuilding>(m => m.gameObject.activeInHierarchy == false);
         ghostBuilding.gameObject.SetActive(true);
-        builder.ghostBuilding = ghostBuilding;
+        builder.SetGhostBuilding(ghostBuilding);
     }
 }

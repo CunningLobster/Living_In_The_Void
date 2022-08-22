@@ -29,9 +29,5 @@ public class GhostModule : GhostBuilding
             placeIsValid = false;
         else
             placeIsValid = true;
-
-        //Debug.Log("Module pos: " + transform.position);
-        //Debug.Log("Socket pos: " + socket.transform.position);
-
     }
 }

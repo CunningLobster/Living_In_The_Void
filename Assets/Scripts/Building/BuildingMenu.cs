@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IRaycastTarget
+public class BuildingMenu : MonoBehaviour
 {
-    void Respond();
 }

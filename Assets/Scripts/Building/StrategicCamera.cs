@@ -16,8 +16,6 @@ public class StrategicCamera : MonoBehaviour
     {
         if (!CameraRaycast(out hit)) return;
         CameraRaycast(out hit);
-        if (hit.collider.gameObject.TryGetComponent<IRaycastTarget>(out IRaycastTarget raycastTarget))
-            raycastTarget.Respond();
     }
 
     bool CameraRaycast(out RaycastHit hit)

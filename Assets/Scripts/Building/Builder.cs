@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class Builder : MonoBehaviour
 {
-    [HideInInspector]
-    public GhostBuilding ghostBuilding = null;
+    private GhostBuilding ghostBuilding = null;
     [SerializeField] StrategicCamera StrategicCamera;
-    //bool placeIsValid;
-
 
     private void Update()
     {
@@ -19,19 +16,14 @@ public class Builder : MonoBehaviour
         {
             ghostBuilding.transform.position = socket.transform.position;
             ghostBuilding.transform.rotation = socket.transform.rotation;
-            //placeIsValid = true;
         }
         else
-        {
             ghostBuilding.transform.position = StrategicCamera.Hit.point;
-            //placeIsValid = false;
-        }
 
         if (Input.GetMouseButtonDown(0) && ghostBuilding.PlaceIsValid)
         {
             Build();
         }
-
     }
 
     void Build()
@@ -41,4 +33,8 @@ public class Builder : MonoBehaviour
         ghostBuilding = null;
     }
 
+    public void SetGhostBuilding(GhostBuilding ghostBuilding)
+    { 
+        this.ghostBuilding = ghostBuilding;
+    }
 }
