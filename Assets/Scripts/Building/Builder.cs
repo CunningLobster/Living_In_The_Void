@@ -14,6 +14,7 @@ public class Builder : MonoBehaviour
 
         ghostBuilding.ShowBuildingPoint(strategicCamera.Hit);
 
+        //TODO: Change input
         if (Input.GetMouseButtonDown(0) && ghostBuilding.PlaceIsValid)
         {
             Build();

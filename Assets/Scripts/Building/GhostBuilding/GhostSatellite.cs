@@ -11,11 +11,12 @@ public class GhostSatellite : GhostBuilding
 
     private void OnTriggerStay(Collider other)
     {
-        if (other != null)
+        if(other.gameObject.GetComponent<Surface>() == null)
             placeIsValid = false;
         else
             placeIsValid = true;
     }
+
 
     public override void ShowBuildingPoint(RaycastHit hit)
     {
