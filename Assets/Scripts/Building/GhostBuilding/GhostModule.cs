@@ -4,30 +4,23 @@ using UnityEngine;
 
 public class GhostModule : GhostBuilding
 {
-    [SerializeField] private Socket socket;
-
     private void OnDisable()
     {
-        socket = null;
         placeIsValid = false;
     }
 
-    public void Connect(Socket socket)
+    public override void ShowBuildingPoint(RaycastHit hit)
     {
-        this.socket = socket;
-    }
-
-    public void Disconnect()
-    {
-        socket = null;
-    }
-
-    private void Update()
-    {
-
-        if (socket == null)
-            placeIsValid = false;
-        else
+        if (hit.collider.TryGetComponent<Socket>(out Socket socket))
+        {
+            transform.position = socket.transform.position;
+            transform.rotation = socket.transform.rotation;
             placeIsValid = true;
+        }
+        else
+        {
+            placeIsValid = false;
+            transform.position = hit.point;
+        }
     }
 }

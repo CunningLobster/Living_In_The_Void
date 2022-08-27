@@ -16,4 +16,9 @@ public class GhostSatellite : GhostBuilding
         else
             placeIsValid = true;
     }
+
+    public override void ShowBuildingPoint(RaycastHit hit)
+    {
+        transform.position = hit.point;
+    }
 }

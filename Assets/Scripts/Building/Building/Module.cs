@@ -4,12 +4,4 @@ using UnityEngine;
 
 public class Module : Building
 {
-
-    void Start()
-    {
-    }
-
-    void Update()
-    {
-    }
 }

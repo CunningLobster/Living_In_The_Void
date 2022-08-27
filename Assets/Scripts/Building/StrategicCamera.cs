@@ -7,11 +7,6 @@ public class StrategicCamera : MonoBehaviour
     private RaycastHit hit;
     public RaycastHit Hit => hit;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         if (!CameraRaycast(out hit)) return;
@@ -24,9 +19,8 @@ public class StrategicCamera : MonoBehaviour
         Vector3 direction = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 500));
 
         Ray ray = new Ray(origin, direction);
-        //RaycastHit hit;
         Debug.DrawRay(origin, direction, Color.blue);
-        return Physics.Raycast(ray, out hit)/* && hit.collider.gameObject.GetComponent<Station>() != null*/;
+        return Physics.Raycast(ray, out hit);
     }
 
 }

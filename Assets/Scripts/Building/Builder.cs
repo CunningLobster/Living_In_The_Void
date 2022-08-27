@@ -5,20 +5,14 @@ using UnityEngine;
 public class Builder : MonoBehaviour
 {
     private GhostBuilding ghostBuilding = null;
-    [SerializeField] StrategicCamera StrategicCamera;
+    [SerializeField] StrategicCamera strategicCamera;
 
     private void Update()
     {
         if (ghostBuilding == null) return;
-        if (StrategicCamera.Hit.collider == null) return;
+        if (strategicCamera.Hit.collider == null) return;
 
-        if (ghostBuilding is GhostModule && StrategicCamera.Hit.collider.TryGetComponent<Socket>(out Socket socket))
-        {
-            ghostBuilding.transform.position = socket.transform.position;
-            ghostBuilding.transform.rotation = socket.transform.rotation;
-        }
-        else
-            ghostBuilding.transform.position = StrategicCamera.Hit.point;
+        ghostBuilding.ShowBuildingPoint(strategicCamera.Hit);
 
         if (Input.GetMouseButtonDown(0) && ghostBuilding.PlaceIsValid)
         {

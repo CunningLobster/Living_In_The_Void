@@ -14,4 +14,5 @@ public abstract class GhostBuilding : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    abstract public void ShowBuildingPoint(RaycastHit hit);
 }
