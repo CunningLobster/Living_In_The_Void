@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Module 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1399592322147119797, guid: c4a999e1fe94bdb4e9bb99efb5779549, type: 3}
+      propertyPath: BuildingData
+      value: 
+      objectReference: {fileID: 11400000, guid: d4a479fe872f5154781ffd6fd2c0615f, type: 2}
     - target: {fileID: 4777182857381303856, guid: c4a999e1fe94bdb4e9bb99efb5779549, type: 3}
       propertyPath: m_RootOrder
       value: 0

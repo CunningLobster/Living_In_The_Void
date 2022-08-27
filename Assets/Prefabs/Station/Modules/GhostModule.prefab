@@ -62,8 +62,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d26a284b324d74478ad9a688dcb6f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildingData: {fileID: 11400000, guid: 96e65f998ccc0664d8027fbcdff6ce16, type: 2}
   buildingPrefab: {fileID: 1399592322147119797, guid: c4a999e1fe94bdb4e9bb99efb5779549, type: 3}
-  connected: 0
+  placeIsValid: 0
 --- !u!1 &2855903529252711426
 GameObject:
   m_ObjectHideFlags: 0

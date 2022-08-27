@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BuildingButton : MonoBehaviour
 {
-    [SerializeField] GhostBuilding building;
+    [SerializeField] BuildingData buildingData;
     BuildingMenu buildingMenu;
 
     private void Awake()
@@ -12,5 +12,8 @@ public class BuildingButton : MonoBehaviour
         buildingMenu = GetComponentInParent<BuildingMenu>();
     }
 
-
+    public void GetGhostBuilding()
+    { 
+        buildingMenu.GhostBuildingPool.GetGhostBuilding(buildingData);
+    }
 }

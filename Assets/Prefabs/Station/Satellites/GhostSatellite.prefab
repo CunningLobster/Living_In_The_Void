@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739e750c81d9ac24abc0e548867eeaf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildingData: {fileID: 11400000, guid: 8d1a546a687fc91409836024614a494c, type: 2}
   buildingPrefab: {fileID: 8553447336835367025, guid: aae821ea7ae34c8449ad93f6e9e6e3f1, type: 3}
   placeIsValid: 0
 --- !u!135 &5680231558990911989

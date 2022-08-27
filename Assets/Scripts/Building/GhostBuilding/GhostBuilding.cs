@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class GhostBuilding : MonoBehaviour
 {
+    [SerializeField] private BuildingData buildingData;
+    public BuildingData BuildingData => buildingData;
     [SerializeField] Building buildingPrefab;
     [SerializeField] protected bool placeIsValid;
     public bool PlaceIsValid => placeIsValid;
