@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class GhostModule : GhostBuilding
 {
-    private void OnDisable()
-    {
-        placeIsValid = false;
-    }
-
     public override void ShowBuildingPoint(RaycastHit hit)
     {
         if (hit.collider.TryGetComponent<Socket>(out Socket socket))
