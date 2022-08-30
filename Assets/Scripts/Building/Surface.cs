@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Условная поверхность
+/// </summary>
 public class Surface : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)

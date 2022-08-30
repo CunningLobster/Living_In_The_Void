@@ -3,8 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// Пул, в котором хранятся проекции построек
+/// </summary>
 public class GhostBuildingPool : MonoBehaviour
 {
+    /// <summary>
+    /// Проекции построек
+    /// </summary>
     [SerializeField] private List<GhostBuilding> ghostBuildings = new List<GhostBuilding>();
     private Builder builder;
 
@@ -13,6 +19,10 @@ public class GhostBuildingPool : MonoBehaviour
         builder = FindObjectOfType<Builder>();
     }
 
+    /// <summary>
+    /// Достать Проекцию с переданными Данными из пула и присвоить ее объекту класса Builder
+    /// </summary>
+    /// <param name="buildingData">Данные здания</param>
     public void GetGhostBuilding(BuildingData buildingData)
     {
         HideGhostBuilding();
@@ -23,6 +33,9 @@ public class GhostBuildingPool : MonoBehaviour
         builder.SetGhostBuilding(ghostBuilding);
     }
 
+    /// <summary>
+    /// Убрать проекцию в пул
+    /// </summary>
     public void HideGhostBuilding()
     {
         foreach (GhostBuilding ghostBuilding in ghostBuildings)
