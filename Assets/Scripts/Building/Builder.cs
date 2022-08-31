@@ -14,7 +14,9 @@ public class Builder : MonoBehaviour
     /// <summary>
     /// Стратегическая камера
     /// </summary>
-    [SerializeField] StrategicCamera strategicCamera;
+    [SerializeField] private StrategicCamera strategicCamera;
+
+    [SerializeField] private GhostBuildingPool ghostBuildingPool;
 
     private void Update()
     {
@@ -36,15 +38,15 @@ public class Builder : MonoBehaviour
     void Build()
     {    
         ghostBuilding.PlaceBuilding();
-        ghostBuilding = null;
+        ghostBuildingPool.HideGhostBuilding();
     }
 
     /// <summary>
     /// Установить значение Ghost Building
     /// </summary>
     /// <param name="ghostBuilding">Проекция здания из пула</param>
-    public void SetGhostBuilding(GhostBuilding ghostBuilding)
-    { 
-        this.ghostBuilding = ghostBuilding;
+    public void SetGhostBuilding(BuildingData buildingData)
+    {
+        this.ghostBuilding = ghostBuildingPool.GetGhostBuilding(buildingData);
     }
 }

@@ -5,15 +5,15 @@ using UnityEngine;
 public class BuildingButton : MonoBehaviour
 {
     [SerializeField] BuildingData buildingData;
-    BuildingMenu buildingMenu;
+    Builder builder;
 
     private void Awake()
     {
-        buildingMenu = GetComponentInParent<BuildingMenu>();
+        builder = FindObjectOfType<BuildingMenu>();
     }
 
     public void GetGhostBuilding()
-    { 
-        buildingMenu.GhostBuildingPool.GetGhostBuilding(buildingData);
+    {
+        builder.SetGhostBuilding(buildingData);
     }
 }

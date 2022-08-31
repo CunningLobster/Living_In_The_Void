@@ -12,7 +12,6 @@ public class GhostBuildingPool : MonoBehaviour
     /// Проекции построек
     /// </summary>
     [SerializeField] private List<GhostBuilding> ghostBuildings = new List<GhostBuilding>();
-    private Builder builder;
 
     private void Awake()
     {
@@ -23,14 +22,15 @@ public class GhostBuildingPool : MonoBehaviour
     /// Достать Проекцию с переданными Данными из пула и присвоить ее объекту класса Builder
     /// </summary>
     /// <param name="buildingData">Данные здания</param>
-    public void GetGhostBuilding(BuildingData buildingData)
+    public GhostBuilding GetGhostBuilding(BuildingData buildingData)
     {
         HideGhostBuilding();
         GhostBuilding ghostBuilding = ghostBuildings.FirstOrDefault(m => m.BuildingData.Equals(buildingData));
 
         if (ghostBuilding == null) return;
         ghostBuilding.gameObject.SetActive(true);
-        builder.SetGhostBuilding(ghostBuilding);
+
+        return ghostBuilding;
     }
 
     /// <summary>
@@ -39,8 +39,6 @@ public class GhostBuildingPool : MonoBehaviour
     public void HideGhostBuilding()
     {
         foreach (GhostBuilding ghostBuilding in ghostBuildings)
-        { 
             ghostBuilding.gameObject.SetActive(false);
-        }
     }
 }
