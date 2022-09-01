@@ -13,11 +13,6 @@ public class GhostBuildingPool : MonoBehaviour
     /// </summary>
     [SerializeField] private List<GhostBuilding> ghostBuildings = new List<GhostBuilding>();
 
-    private void Awake()
-    {
-        builder = FindObjectOfType<Builder>();
-    }
-
     /// <summary>
     /// Достать Проекцию с переданными Данными из пула и присвоить ее объекту класса Builder
     /// </summary>
@@ -27,7 +22,6 @@ public class GhostBuildingPool : MonoBehaviour
         HideGhostBuilding();
         GhostBuilding ghostBuilding = ghostBuildings.FirstOrDefault(m => m.BuildingData.Equals(buildingData));
 
-        if (ghostBuilding == null) return;
         ghostBuilding.gameObject.SetActive(true);
 
         return ghostBuilding;

@@ -30,10 +30,11 @@ public abstract class GhostBuilding : MonoBehaviour
     /// <summary>
     /// Разместить постройку
     /// </summary>
-    public void PlaceBuilding()
+    public Building PlaceBuilding()
     {
         if(IsValidToBuild())
-            Building building = Instantiate(buildingPrefab, gameObject.transform.position, transform.rotation);
+          return Instantiate(buildingPrefab, gameObject.transform.position, transform.rotation);
+        return null;
     }
 
     private bool IsValidToBuild()

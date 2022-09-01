@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class BuildingButton : MonoBehaviour
 {
-    [SerializeField] BuildingData buildingData;
-    Builder builder;
+    [SerializeField] private BuildingData buildingData;
+    private Builder builder;
 
     private void Awake()
     {
-        builder = FindObjectOfType<BuildingMenu>();
+        builder = FindObjectOfType<Builder>();
     }
 
-    public void GetGhostBuilding()
+    public void SelectBuilding()
     {
-        builder.SetGhostBuilding(buildingData);
+        builder.SelectBuilding(buildingData);
     }
 }

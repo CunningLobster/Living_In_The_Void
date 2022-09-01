@@ -28,15 +28,16 @@ public class Builder : MonoBehaviour
     /// </summary>
     void Build()
     {    
-        selectedBuilding.PlaceBuilding();
-        ghostBuildingPool.HideGhostBuilding();
+        Building building = selectedBuilding.PlaceBuilding();
+        if(building != null)
+            ghostBuildingPool.HideGhostBuilding();
     }
 
     /// <summary>
     /// Установить значение Ghost Building
     /// </summary>
     /// <param name="ghostBuilding">Проекция здания из пула</param>
-    public void SetGhostBuilding(BuildingData buildingData)
+    public void SelectBuilding(BuildingData buildingData)
     {
         this.selectedBuilding = ghostBuildingPool.GetGhostBuilding(buildingData);
     }
