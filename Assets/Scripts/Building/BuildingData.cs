@@ -4,14 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Данные здания
+/// Данные Постройки
 /// </summary>
 [CreateAssetMenu(fileName = "Create Building Data", menuName = "ScriptableObjects/Building", order = 1)]
 public class BuildingData : ScriptableObject
 {
-    /// <summary>
-    /// Иконка здания
-    /// </summary>
-    [SerializeField] Sprite image;
-    //Далее будут требования для пострройки здания (напр. Кол-во необходимых ресурсов)
+    [SerializeField] private Sprite image;
+    [SerializeField] private float hp;
+
+    [SerializeField] private float buyingPrice;
 }

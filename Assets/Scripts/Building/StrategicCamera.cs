@@ -8,6 +8,7 @@ using UnityEngine;
 public class StrategicCamera : MonoBehaviour
 {
     private RaycastHit hit;
+
     /// <summary>
     /// Данные точки пересечения луча и объекта
     /// </summary>

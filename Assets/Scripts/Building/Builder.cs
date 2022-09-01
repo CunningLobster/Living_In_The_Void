@@ -3,33 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Строитель. Класс отвечает за логику постройки здания, с помощью проекции взятой из пула 
+/// Строитель. Класс отвечает за логику Строительства с помощью проекции взятой из пула 
 /// </summary>
 public class Builder : MonoBehaviour
 {
-    /// <summary>
-    /// Проекция здания, взятая из пула
-    /// </summary>
-    private GhostBuilding ghostBuilding = null;
-    /// <summary>
-    /// Стратегическая камера
-    /// </summary>
+    private GhostBuilding selectedBuilding = null;
     [SerializeField] private StrategicCamera strategicCamera;
-
     [SerializeField] private GhostBuildingPool ghostBuildingPool;
 
     private void Update()
     {
-        if (ghostBuilding == null) return;
+        if (selectedBuilding == null) return;
         if (strategicCamera.Hit.collider == null) return;
 
-        ghostBuilding.ShowBuildingPoint(strategicCamera.Hit);
+        selectedBuilding.ShowBuildingPoint(strategicCamera.Hit);
 
         //TODO: Change input
-        if (Input.GetMouseButtonDown(0) && ghostBuilding.PlaceIsValid)
-        {
+        if (Input.GetMouseButtonDown(0))
             Build();
-        }
     }
 
     /// <summary>
@@ -37,7 +28,7 @@ public class Builder : MonoBehaviour
     /// </summary>
     void Build()
     {    
-        ghostBuilding.PlaceBuilding();
+        selectedBuilding.PlaceBuilding();
         ghostBuildingPool.HideGhostBuilding();
     }
 
@@ -47,6 +38,6 @@ public class Builder : MonoBehaviour
     /// <param name="ghostBuilding">Проекция здания из пула</param>
     public void SetGhostBuilding(BuildingData buildingData)
     {
-        this.ghostBuilding = ghostBuildingPool.GetGhostBuilding(buildingData);
+        this.selectedBuilding = ghostBuildingPool.GetGhostBuilding(buildingData);
     }
 }

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Проекция спутника
+/// </summary>
 public class GhostSatellite : GhostBuilding
 {
     private bool isOnSurface;
